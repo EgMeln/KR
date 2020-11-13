@@ -31,6 +31,7 @@ public class Race {
         for (User people : usersInRace) {
             if (login.equals(people.getLogin()) || email.equals(people.getEmail())) {
                 System.out.println("This user already exists");
+                return usersInRace;
             }
         }
         usersInRace.add(new User(name, login, email, password, User.Role.USER));
