@@ -10,24 +10,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         ArrayList<User> users = new ArrayList<>();
-        try (Scanner scannerUsers = new Scanner(new File("users.txt"));) {
-            while (scannerUsers.hasNextLine()) {
-                String line = scannerUsers.nextLine();
-                String[] user = line.split(";");
-                users.add(new User(user));
-            }
-        }
         HashMap<String, Horse> horses = new HashMap<>();
-        try (Scanner scannerHorses = new Scanner(new File("horses.txt"))) {
-            while (scannerHorses.hasNextLine()) {
-                String line = scannerHorses.nextLine();
-                String[] horse = line.split(",");
-                horses.put(horse[0], new Horse(horse));
-            }
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
         try (Scanner scanner = new Scanner(System.in)) {
+            try (Scanner scannerUsers = new Scanner(new File("users.txt"));) {
+                while (scannerUsers.hasNextLine()) {
+                    String line = scannerUsers.nextLine();
+                    String[] user = line.split(";");
+                    users.add(new User(user));
+                }
+            }
+            try (Scanner scannerHorses = new Scanner(new File("horses.txt"))) {
+                while (scannerHorses.hasNextLine()) {
+                    String line = scannerHorses.nextLine();
+                    String[] horse = line.split(",");
+                    horses.put(horse[0], new Horse(horse));
+                }
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
             Race race = new Race(users, horses);
             int key;
             while (true) {
