@@ -12,14 +12,13 @@ public class Main {
         ArrayList<User> users = new ArrayList<>();
         HashMap<String, Horse> horses = new HashMap<>();
         try (Scanner scanner = new Scanner(System.in)) {
-            try (Scanner scannerUsers = new Scanner(new File("users.txt"));) {
+            try (Scanner scannerUsers = new Scanner(new File("users.txt"))) {
+                Scanner scannerHorses = new Scanner(new File("horses.txt"));
                 while (scannerUsers.hasNextLine()) {
                     String line = scannerUsers.nextLine();
                     String[] user = line.split(";");
                     users.add(new User(user));
                 }
-            }
-            try (Scanner scannerHorses = new Scanner(new File("horses.txt"))) {
                 while (scannerHorses.hasNextLine()) {
                     String line = scannerHorses.nextLine();
                     String[] horse = line.split(",");
