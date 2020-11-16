@@ -1,5 +1,0 @@
-1,club1,name1,01.01.2001,competition1,3
-2,club2,name2,02.02.2002,competition2,4
-3,club3,name3,03.03.2003,competition3,2
-4,club4,name4,04.04.2004,competition4,1
-5,club5,name5,05.05.2005,competition5,6
