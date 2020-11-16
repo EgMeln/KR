@@ -1,5 +1,0 @@
-Egor;EgorMel;egormelnikov5@mail.ru;123456789;ADMIN;
-Vova;Vavan;Vovakrutoi@gmail.com;111111111;USER;
-R;Rru;Rrrrrr@yandex.ru;123123123;USER;
-P;Ppe;Pppppp@mail.ru;987654321;USER;
-d;d;d;d;USER;
